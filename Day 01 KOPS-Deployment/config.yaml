@@ -1,3 +1,4 @@
+-- this is kubernetes config file
 apiVersion: kops.k8s.io/v1alpha2
 kind: Cluster
 metadata:
@@ -43,7 +44,7 @@ spec:
   - ::/0
   kubernetesVersion: 1.28.11
   masterPublicName: api.mydef.xyz
-  networkCIDR: 172.20.0.0/16
+  networkCIDR: 192.168.0.0/16
   networking:
     cilium:
       enableNodePort: true
@@ -52,11 +53,11 @@ spec:
   - 0.0.0.0/0
   - ::/0
   subnets:
-  - cidr: 172.20.0.0/17
+  - cidr: 192.168.1.0/24
     name: us-east-1a
     type: Public
     zone: us-east-1a
-  - cidr: 172.20.128.0/17
+  - cidr: 192.168.2.0/24
     name: us-east-1b
     type: Public
     zone: us-east-1b
