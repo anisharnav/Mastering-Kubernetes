@@ -23,7 +23,7 @@ kops create cluster --name=mydef.xyz \
 --node-count=2 --control-plane-count=1 --node-size=t3.medium --control-plane-size=t3.medium \
 --control-plane-zones=us-east-1a --control-plane-volume-size 10 --node-volume-size 10 \
 --ssh-public-key ~/.ssh/id_ed25519.pub \
---dns-zone=cloudvishwakarma.in --dry-run --output yaml
+--dns-zone=mydef.xyz --dry-run --output yaml
 
 
 
