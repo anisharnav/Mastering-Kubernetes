@@ -18,8 +18,8 @@ export EDITOR='/usr/bin/nano'
 
 # Create a Cluster using Kops and generate a cluster file and save it carefully and do neccessary changes
 
-kops create cluster --name=cloudvishwakarma.in \
---state=s3://cloudvishwakarma.in --zones=us-east-1a,us-east-1b \
+kops create cluster --name=mydef.xyz \
+--state=s3://mydef.xyz --zones=us-east-1a,us-east-1b \
 --node-count=2 --control-plane-count=1 --node-size=t3.medium --control-plane-size=t3.medium \
 --control-plane-zones=us-east-1a --control-plane-volume-size 10 --node-volume-size 10 \
 --ssh-public-key ~/.ssh/id_ed25519.pub \
@@ -40,6 +40,6 @@ kops create cluster --name=cloudvishwakarma.in \
 # One done run below commands to create the cluster 
 
 kops create -f cluster.yml
-kops update cluster --name cloudvishwakarma.in --yes --admin
+kops update cluster --name mydef.xyz --yes --admin
 kops validate cluster --wait 10m
 kops delete -f cluster.yml  --yes
