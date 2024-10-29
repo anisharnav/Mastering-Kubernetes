@@ -5,6 +5,10 @@ metadata:
     app: testpod1
   name: testpod1
 spec:
+  Strategy:
+    rollingUpdate:
+      maxSurge:100%
+      maxUnavailable:
   replicas: 6
   selector:
     matchLabels:
@@ -18,3 +22,5 @@ spec:
       containers:
       - image: kiran2361993/kubegame:v2
         name: kubegame
+      - image: kiran2361993/mydb:v1
+        name: mysql
