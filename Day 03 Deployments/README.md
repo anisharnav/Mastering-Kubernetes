@@ -85,7 +85,7 @@ strategy:
     maxSurge: 1
     maxUnavailable: 0%
 ```
-
+maxSurge: - The maximum numbr of pods that can be scheduled above the desired (replicas) number of pods.
 ### Deployment Update Strategy
 ```sh
 kubectl edit deployment testapp
