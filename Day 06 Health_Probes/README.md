@@ -12,7 +12,7 @@ In this repository, we'll explore how to use Kubernetes Readiness and Liveness P
 
 Kubernetes Probes are health checks that allow the platform to manage the lifecycle of your Pods. There are two main types of probes:
 
-1. **Readiness Probe:** Checks if a container is ready to start accepting traffic.
+1. **Readiness Probe:** Checks if a container is ready to start accepting traffic. It does not have capability of restarting the containerrs.
 2. **Liveness Probe:** Checks if a container is still alive and should be restarted if it fails.
 
 ## Why Use Probes?
